@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import ArticlesGrid from "../components/articles-grid"
 import Seo from "../components/seo"
 import Headings from "../components/headings"
+import HomeBanner from "../svg/HomeBanner"
 
 const IndexPage = () => {
   const { allStrapiArticle, strapiGlobal } = useStaticQuery(graphql`
@@ -28,6 +29,7 @@ const IndexPage = () => {
         description={strapiGlobal.siteDescription}
       />
       <main>
+        <HomeBanner />
         <ArticlesGrid articles={allStrapiArticle.nodes} />
       </main>
     </Layout>
